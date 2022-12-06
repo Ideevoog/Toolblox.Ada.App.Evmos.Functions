@@ -1,0 +1,19 @@
+{
+  "bindings": [
+    {
+      "name": "myQueueItem",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "invoices-to-process",
+      "connection": "adawillhandlestorage_STORAGE"
+    },
+    {
+      "type": "queue",
+      "direction": "out",
+      "name": "outQueueItem",
+      "queueName": "invoices-to-automate",
+      "connection": "adawillhandlestorage_STORAGE"
+    }
+  ],
+  "scriptFile": "../dist/ProcessInvoiceFunction/index.js"
+}
